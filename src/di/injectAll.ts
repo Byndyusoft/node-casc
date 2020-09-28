@@ -1,0 +1,1 @@
+export {injectAll} from "tsyringe";

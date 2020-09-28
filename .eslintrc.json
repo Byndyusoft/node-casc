@@ -1,0 +1,294 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["simple-import-sort"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "rules": {
+    // @typescript-eslint/eslint-plugin supported rules
+    "@typescript-eslint/array-type": [
+      "error",
+      {
+        "default": "array-simple"
+      }
+    ],
+    "@typescript-eslint/consistent-type-assertions": [
+      "error",
+      {
+        "assertionStyle": "as",
+        "objectLiteralTypeAssertions": "allow-as-parameter"
+      }
+    ],
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "no-type-imports",
+        "disallowTypeAnnotations": true
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true,
+        "allowHigherOrderFunctions": true,
+        "allowConciseArrowFunctionExpressionsStartingWithVoid": true
+      }
+    ],
+    "@typescript-eslint/explicit-member-accessibility": "error",
+    "@typescript-eslint/member-ordering": [
+      "error",
+      {
+        "default": {
+          "memberTypes": [
+            // Index signature
+            "signature",
+
+            // Fields
+            "public-static-field",
+            "protected-static-field",
+            "private-static-field",
+
+            "public-decorated-field",
+            "protected-decorated-field",
+            "private-decorated-field",
+
+            "public-instance-field",
+            "protected-instance-field",
+            "private-instance-field",
+
+            "public-abstract-field",
+            "protected-abstract-field",
+            "private-abstract-field",
+
+            // Constructors
+            "public-constructor",
+            "protected-constructor",
+            "private-constructor",
+
+            // Methods
+            "public-static-method",
+            "protected-static-method",
+            "private-static-method",
+
+            "public-decorated-method",
+            "protected-decorated-method",
+            "private-decorated-method",
+
+            "public-instance-method",
+            "protected-instance-method",
+            "private-instance-method",
+
+            "public-abstract-method",
+            "protected-abstract-method",
+            "private-abstract-method"
+          ],
+          "order": "alphabetically"
+        }
+      }
+    ],
+    "@typescript-eslint/method-signature-style": "error",
+    "@typescript-eslint/no-base-to-string": "error",
+    "@typescript-eslint/no-dynamic-delete": "error",
+    "@typescript-eslint/no-extraneous-class": [
+      "error",
+      {
+        "allowConstructorOnly": false,
+        "allowEmpty": false,
+        "allowStaticOnly": true,
+        "allowWithDecorator": false
+      }
+    ],
+    "@typescript-eslint/no-implicit-any-catch": "error",
+    "@typescript-eslint/no-invalid-void-type": "error",
+    "@typescript-eslint/no-require-imports": "error",
+    "@typescript-eslint/no-throw-literal": "error",
+    "@typescript-eslint/no-type-alias": [
+      "error",
+      {
+        "allowAliases": "always",
+        "allowCallbacks": "never",
+        "allowConditionalTypes": "never",
+        "allowConstructors": "never",
+        "allowLiterals": "never",
+        "allowMappedTypes": "never",
+        "allowTupleTypes": "never"
+      }
+    ],
+    "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+    "@typescript-eslint/no-unnecessary-condition": "error",
+    "@typescript-eslint/no-unnecessary-type-arguments": "error",
+    "@typescript-eslint/prefer-enum-initializers": "error",
+    "@typescript-eslint/prefer-for-of": "error",
+    "@typescript-eslint/prefer-function-type": "error",
+    "@typescript-eslint/prefer-includes": "error",
+    "@typescript-eslint/prefer-literal-enum-member": "error",
+    "@typescript-eslint/prefer-nullish-coalescing": "error",
+    "@typescript-eslint/prefer-optional-chain": "error",
+    "@typescript-eslint/prefer-reduce-type-parameter": "error",
+    "@typescript-eslint/prefer-string-starts-ends-with": "error",
+    "@typescript-eslint/prefer-ts-expect-error": "error",
+    "@typescript-eslint/require-array-sort-compare": [
+      "error",
+      {
+        "ignoreStringArrays": true
+      }
+    ],
+    "@typescript-eslint/restrict-plus-operands": [
+      "error",
+      {
+        "checkCompoundAssignments": true
+      }
+    ],
+    "@typescript-eslint/strict-boolean-expressions": [
+      "error",
+      {
+        "allowString": false,
+        "allowNumber": false,
+        "allowNullableObject": false,
+        "allowNullableBoolean": false,
+        "allowNullableString": false,
+        "allowNullableNumber": false,
+        "allowAny": false,
+        "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false
+      }
+    ],
+    "@typescript-eslint/switch-exhaustiveness-check": "error",
+    "@typescript-eslint/unbound-method": [
+      "error",
+      {
+        "ignoreStatic": true
+      }
+    ],
+    "@typescript-eslint/unified-signatures": "error",
+    // @typescript-eslint/eslint-plugin extension rules
+    "default-param-last": "off",
+    "@typescript-eslint/default-param-last": "error",
+
+    "lines-between-class-members": "off",
+    "@typescript-eslint/lines-between-class-members": "error",
+
+    "no-invalid-this": "off",
+    "@typescript-eslint/no-invalid-this": "error",
+
+    "no-loop-func": "off",
+    "@typescript-eslint/no-loop-func": "error",
+
+    "no-loss-of-precision": "off",
+    "@typescript-eslint/no-loss-of-precision": ["error"],
+
+    "no-return-await": "off",
+    "@typescript-eslint/return-await": "error",
+    // eslint-plugin-import static analysis
+    "import/no-absolute-path": "error",
+    "import/no-dynamic-require": "error",
+    "import/no-self-import": "error",
+    "import/no-cycle": "error",
+    "import/no-useless-path-segments": [
+      "error",
+      {
+        "noUselessIndex": true
+      }
+    ],
+    // eslint-plugin-import helpful warnings
+    "import/no-deprecated": "warn",
+    "import/no-extraneous-dependencies": [
+      "warn",
+      {
+        "devDependencies": false
+      }
+    ],
+    "import/no-mutable-exports": "warn",
+    // eslint-plugin-import module system
+    "import/no-commonjs": "warn",
+    // eslint-plugin-import style guide
+    "import/first": "warn",
+    "import/extensions": "warn",
+    "import/newline-after-import": "warn",
+    "import/no-unassigned-import": [
+      "warn",
+      {
+        "allow": ["reflect-metadata"]
+      }
+    ],
+    "import/no-named-default": "warn",
+    // eslint-plugin-simple-import-sort
+    "simple-import-sort/sort": [
+      "warn",
+      {
+        "groups": [
+          // Side effect imports
+          ["^\\u0000"],
+
+          // Node.js builtins. You could also generate this regex if you use a `.js` config.
+          // For example: `^(${require("module").builtinModules.join("|")})(/|$)`
+          [
+            "^(_http_agent|_http_client|_http_common|_http_incoming|_http_outgoing|_http_server|_stream_duplex|_stream_passthrough|_stream_readable|_stream_transform|_stream_wrap|_stream_writable|_tls_common|_tls_wrap|assert|async_hooks|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|http2|https|inspector|module|net|os|path|perf_hooks|process|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|trace_events|tty|url|util|v8|vm|worker_threads|zlib)(/|$)"
+          ],
+
+          // Packages.
+          // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
+          ["^@?\\w"],
+
+          // Absolute imports and other imports such as Vue-style `@/foo`.
+          // Anything that does not start with a dot.
+          ["^[^.]"],
+
+          // Parent imports. Put `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+
+          // Other relative imports. Put same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"]
+        ]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["./test/**/*.ts", "./gulpfile.ts"],
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ]
+      }
+    },
+    {
+      "files": "*.spec.ts",
+      "extends": ["plugin:jest/recommended", "plugin:jest/style"],
+      "rules": {
+        // eslint-plugin-jest
+        "jest/consistent-test-it": "warn",
+        "jest/no-duplicate-hooks": "warn",
+        "jest/no-if": "warn",
+        "jest/no-test-return-statement": "warn",
+        "jest/prefer-hooks-on-top": "warn",
+        "jest/prefer-spy-on": "warn",
+        "jest/prefer-strict-equal": "warn",
+        "jest/prefer-todo": "warn",
+        "jest/require-to-throw-message": "warn",
+        "jest/require-top-level-describe": "warn"
+      }
+    }
+  ]
+}
