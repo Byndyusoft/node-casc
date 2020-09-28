@@ -1,0 +1,4 @@
+{
+  "exclude": ["./dist", "./node_modules", "./test", "./gulpfile.ts"],
+  "extends": "./tsconfig.json"
+}
