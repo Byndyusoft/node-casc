@@ -83,7 +83,7 @@ describe("bin/InitDirCommand", () => {
     });
 
     it("must print warnings if files already exists", async () => {
-      const bang = new CLIError.Warn("").bang;
+      const bang = new CLIError.Warn("").bang.replace(/[^»›]/g, "");
       const cascDir = path.join(tempCascDir.path, ".casc");
 
       const {
