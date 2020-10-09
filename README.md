@@ -110,6 +110,7 @@ By default CASC directory is `$(pwd)/.casc`.
 
 Handlebars helpers:
 
+- `str` - convert value to string
 - `exists` - checks that all values exists
 
 ### settings.yaml
