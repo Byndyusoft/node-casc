@@ -16,10 +16,10 @@ jobs:
       - name: install nodejs
         uses: actions/setup-node@v2-beta
         with:
-          node-version: "12"
+          node-version: "14"
 
       - name: extract tag from ref
-        uses: rlespinasse/github-slug-action@v2.x
+        uses: rlespinasse/github-slug-action@v3.x
 
       - name: extract version from tag
         id: version
