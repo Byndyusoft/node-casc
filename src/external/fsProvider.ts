@@ -25,10 +25,10 @@ export class FsProvider implements IFsProvider {
   }
 
   public async readYaml<T>(fileName: string): Promise<T> {
-    return (yaml.safeLoad(await this.readText(fileName)) as unknown) as T;
+    return (yaml.load(await this.readText(fileName)) as unknown) as T;
   }
 
   public readYamlSync<T>(fileName: string): T {
-    return (yaml.safeLoad(this.readTextSync(fileName)) as unknown) as T;
+    return (yaml.load(this.readTextSync(fileName)) as unknown) as T;
   }
 }

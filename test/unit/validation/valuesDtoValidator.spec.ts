@@ -22,6 +22,6 @@ describe("validation/ValuesDtoValidator", () => {
           "wrong environment name with space": "value",
         },
       }),
-    ).toThrow(`data['key'] should NOT have additional properties`);
+    ).toThrow(`data/key should NOT have additional properties`);
   });
 });

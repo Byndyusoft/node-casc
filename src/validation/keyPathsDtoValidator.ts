@@ -8,7 +8,7 @@ import {
 import {JsonSchemaValidator} from "./jsonSchemaValidator";
 
 const schema = {
-  $schema: "http://json-schema.org/draft-07/schema",
+  $schema: "https://json-schema.org/draft/2019-09/schema",
   type: ["string", "array"],
   items: {
     type: "string",

@@ -71,7 +71,7 @@ describe("bin/ValuesEncryptCommand", () => {
       expect(exitCode).toStrictEqual(0);
       expect(stderr).toStrictEqual("");
 
-      const encryptedValues = yaml.safeLoad(stdout) as ValuesDto;
+      const encryptedValues = yaml.load(stdout) as ValuesDto;
 
       expect(Object.keys(encryptedValues)).toStrictEqual([
         "KEY",
