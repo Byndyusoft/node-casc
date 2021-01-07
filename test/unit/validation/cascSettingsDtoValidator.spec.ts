@@ -46,6 +46,6 @@ describe("validation/CascSettingsDtoValidator", () => {
           },
         },
       }),
-    ).toThrow(`data.crypto.strategy should match pattern "^[A-Za-z_]\\w*$"`);
+    ).toThrow(`data/crypto/strategy should match pattern "^[A-Za-z_]\\w*$"`);
   });
 });

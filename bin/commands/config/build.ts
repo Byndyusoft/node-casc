@@ -53,7 +53,7 @@ export default class ConfigBuildCommand extends BaseCommand {
     );
 
     if (flags.yaml) {
-      this.log(yaml.safeDump(config));
+      this.log(yaml.dump(config));
     } else {
       cli.styledJSON(config);
     }

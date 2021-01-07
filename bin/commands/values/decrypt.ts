@@ -35,7 +35,7 @@ export default class ValuesDecryptCommand extends BaseCommand {
     );
 
     if (flags.yaml) {
-      this.log(yaml.safeDump(values));
+      this.log(yaml.dump(values));
     } else {
       cli.styledJSON(values);
     }

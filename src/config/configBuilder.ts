@@ -48,6 +48,6 @@ export class ConfigBuilder implements IConfigBuilder {
       helpers: this.__helpers,
     });
 
-    return (yaml.safeLoad(configString) as unknown) as TConfig;
+    return (yaml.load(configString) as unknown) as TConfig;
   }
 }

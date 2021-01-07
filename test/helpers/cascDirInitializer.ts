@@ -88,7 +88,7 @@ export class CascDirInitializer {
         await fs.promises.mkdir(path.dirname(fileName), {recursive: true});
         await fs.promises.writeFile(
           fileName,
-          _.isString(content) ? content : yaml.safeDump(content),
+          _.isString(content) ? content : yaml.dump(content),
         );
       })(),
     );

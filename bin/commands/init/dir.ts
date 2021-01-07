@@ -66,6 +66,6 @@ export default class InitDirCommand extends BaseCommand {
       },
     };
 
-    return this.__createFile("settings.yaml", yaml.safeDump(cascSettings));
+    return this.__createFile("settings.yaml", yaml.dump(cascSettings));
   }
 }
